@@ -57,10 +57,12 @@ node {
         }
 
         stage("publish artifact") {
-            if (isSnapshot) {
-                sh "${mvn} clean deploy -DskipTests -B -e"
-            } else {
-                println("POM version is not a SNAPSHOT, it is ${pom.version}. Skipping publishing!")
+            withCredentials([usernamePassword(credentialsId: 'nexusUploader', usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
+                if (isSnapshot) {
+                    sh "${mvn} clean deploy -Dusername=${env.NEXUS_USERNAME} -Dpassword=${env.NEXUS_PASSWORD} -DskipTests -B -e"
+                } else {
+                    println("POM version is not a SNAPSHOT, it is ${pom.version}. Skipping publishing!")
+                }
             }
         }
 
