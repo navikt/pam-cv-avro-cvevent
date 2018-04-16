@@ -1,0 +1,253 @@
+{
+  "namespace": "no.nav.arbeid.cv.events",
+  "type": "record",
+  "name": "CvEvent",
+  "fields": [
+    {"name": "fodselsnummer", "type": "string"},
+    {"name": "fornavn", "type": "string"},
+    {"name": "etternavn", "type": "string"},
+    {"name": "fodselsdato", "type": ["null", "string"]},
+    {"name": "fodselsdatoErDnr", "type": "boolean"},
+    {"name": "formidlingsgruppekode", "type": "string"},
+    {"name": "epostadresse", "type": ["null", "string"]},
+    {"name": "statsborgerskap", "type": ["null", "string"]},
+    {"name": "arenaPersonId", "type": "long"},
+    {"name": "arenaKandidatnr", "type": "string"},
+    {"name": "beskrivelse", "type": ["null", "string"]},
+    {"name": "samtykkeStatus", "type": "string"},
+    {"name": "samtykkeDato", "type": ["null", "string"]},
+    {"name": "adresselinje1", "type": ["null", "string"]},
+    {"name": "adresselinje2", "type": ["null", "string"]},
+    {"name": "adresselinje3", "type": ["null", "string"]},
+    {"name": "postnr", "type": ["null", "string"]},
+    {"name": "poststed", "type": ["null", "string"]},
+    {"name": "landkode", "type": ["null", "string"]},
+    {"name": "kommunenr", "type": ["null", "int"]},
+    {"name": "disponererBil", "type": ["null", "boolean"]},
+    {"name": "aap", "type": "boolean"},
+    {"name": "syfo", "type": "boolean"},
+    {"name": "tidsstempel", "type": "string"},
+    {"name": "utdanning", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Utdanning",
+          "fields": [
+            {"name": "fraDato", "type": "string"},
+            {"name": "tilDato", "type": ["null", "string"]},                       
+            {"name": "utdannelsessted", "type": ["null", "string"]},            
+            {"name": "nusKode", "type": ["null", "string"]},
+            {"name": "nusKodeGrad", "type": ["null", "string"]},
+            {"name": "alternativGrad", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "yrkeserfaring", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Yrkeserfaring",
+          "fields": [
+            {"name": "fraDato", "type": "string"},
+            {"name": "tilDato", "type": ["null", "string"]},
+            {"name": "arbeidsgiver", "type": ["null", "string"]},                                    
+            {"name": "styrkKode", "type": ["null", "string"]},
+            {"name": "styrkKodeStillingstittel", "type": ["null", "string"]},
+            {"name": "alternativStillingstittel", "type": ["null", "string"]},
+            {"name": "organisasjonsnummer", "type": ["null", "string"]},
+            {"name": "naceKode", "type": ["null", "string"]}
+           ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "kompetanse", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Kompetanse",
+          "fields": [
+            {"name": "fraDato", "type": "string"},            
+            {"name": "kompKode", "type": ["null", "string"]},
+            {"name": "kompKodeNavn", "type": ["null", "string"]},
+            {"name": "alternativtNavn", "type": ["null", "string"]},
+            {"name": "beskrivelse", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "sertifikat", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Sertifikat",
+          "fields": [
+            {"name": "fraDato", "type": ["null", "string"]},
+            {"name": "tilDato", "type": ["null", "string"]},
+            {"name": "sertifikatKode", "type": ["null", "string"]},
+            {"name": "sertifikatKodeNavn", "type": ["null", "string"]},
+            {"name": "alternativtNavn", "type": ["null", "string"]},
+            {"name": "utsteder", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "forerkort", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Forerkort",
+          "fields": [
+            {"name": "fraDato", "type": ["null", "string"]},
+            {"name": "tilDato", "type": ["null", "string"]},
+            {"name": "forerkortKode", "type": ["null", "string"]},
+            {"name": "forerkortKodeKlasse", "type": ["null", "string"]},
+            {"name": "alternativKlasse", "type": ["null", "string"]},            
+            {"name": "utsteder", "type": ["null", "string"]}            
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "sprak", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Sprak",
+          "fields": [
+            {"name": "fraDato", "type": ["null", "string"]},
+            {"name": "sprakKode", "type": ["null", "string"]},
+            {"name": "sprakKodeTekst", "type": ["null", "string"]},
+            {"name": "alternativTekst", "type": ["null", "string"]},
+            {"name": "beskrivelse", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "kurs", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Kurs",
+          "fields": [
+            {"name": "fraDato", "type": ["null", "string"]},
+            {"name": "tilDato", "type": ["null", "string"]},
+            {"name": "tittel", "type": ["null", "string"]},
+            {"name": "arrangor", "type": ["null", "string"]},
+            {"name": "omfang", "type":
+              {
+                "type": "record",
+                "name": "Omfang",
+                "fields": [
+                  {"name": "verdi", "type": ["null", "int"]},
+                  {"name": "enhet", "type": ["null", "string"]}
+                ]
+              }
+            },
+            {"name": "beskrivelse", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "verv", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "Verv",
+          "fields": [
+            {"name": "fraDato", "type": ["null", "string"]},
+            {"name": "tilDato", "type": ["null", "string"]},
+            {"name": "organisasjon", "type": ["null", "string"]},
+            {"name": "tittel", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "geografiJobbonsker", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "GeografiJobbonsker",
+          "fields": [
+            {"name": "geografiKodeTekst", "type": ["null", "string"]},
+            {"name": "geografiKode", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "yrkeJobbonsker", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "YrkeJobbonsker",
+          "fields": [
+            {"name": "styrkKode", "type": ["null", "string"]},
+            {"name": "styrkBeskrivelse", "type": ["null", "string"]},
+            {"name": "primaertJobbonske", "type": "boolean"}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "heltidDeltidJobbonsker", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "HeltidDeltidJobbonsker",
+          "fields": [
+            {"name": "heltidDeltidKode", "type": ["null", "string"]},
+            {"name": "heltidDeltidKodeTekst", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "ansettelsesforholdJobbonsker", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "AnsettelsesforholdJobbonsker",
+          "fields": [
+            {"name": "ansettelsesforholdKode", "type": ["null", "string"]},
+            {"name": "ansettelsesforholdKodeTekst", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    },
+    {"name": "arbeidstidsordningJobbonsker", "type":
+      {
+        "type": "array", "items":
+        {
+          "type": "record",
+          "name": "ArbeidstidsordningJobbonsker",
+          "fields": [
+            {"name": "arbeidstidsordningKode", "type": ["null", "string"]},
+            {"name": "arbeidstidsordningKodeTekst", "type": ["null", "string"]}
+          ]
+        },
+        "java-class": "java.util.List"
+      }
+    }
+  ]
+}
