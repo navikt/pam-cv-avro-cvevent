@@ -11,7 +11,11 @@ node {
 
         stage("checkout") {
             deleteDir()
-            checkout scm
+            withCredentials([string(credentialsId: 'navikt-ci-oauthtoken', variable: 'token')]) {
+             withEnv(['HTTPS_PROXY=http://webproxy-utvikler.nav.no:8088']) {
+                    git url: "https://${token}:x-oauth-basic@github.com/navikt/${application}.git"
+                }
+            }
         }
 
         stage("initialize") {
