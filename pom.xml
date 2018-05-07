@@ -6,7 +6,7 @@
 
 	<groupId>no.nav.arbeid.cv.avro</groupId>
 	<artifactId>cv-event</artifactId>
-	<version>9-SNAPSHOT</version>
+	<version>9</version>
 	<packaging>jar</packaging>
 
 	<name>cv-event</name>
