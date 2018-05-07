@@ -24,6 +24,7 @@
     {"name": "landkode", "type": ["null", "string"]},
     {"name": "kommunenr", "type": ["null", "int"]},
     {"name": "disponererBil", "type": ["null", "boolean"]},
+     {"name": "removeme", "type": "string"},
     {"name": "tidsstempel", "type": "string"},
     {"name": "utdanning", "type":
       {
