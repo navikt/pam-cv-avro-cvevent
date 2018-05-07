@@ -24,8 +24,6 @@
     {"name": "landkode", "type": ["null", "string"]},
     {"name": "kommunenr", "type": ["null", "int"]},
     {"name": "disponererBil", "type": ["null", "boolean"]},
-    {"name": "aap", "type": "boolean"},
-    {"name": "syfo", "type": "boolean"},
     {"name": "tidsstempel", "type": "string"},
     {"name": "utdanning", "type":
       {
@@ -59,7 +57,8 @@
             {"name": "styrkKodeStillingstittel", "type": ["null", "string"]},
             {"name": "alternativStillingstittel", "type": ["null", "string"]},
             {"name": "organisasjonsnummer", "type": ["null", "string"]},
-            {"name": "naceKode", "type": ["null", "string"]}
+            {"name": "naceKode", "type": ["null", "string"]},
+            {"name": "utelukketForFremtiden", "type": "boolean"}
            ]
         },
         "java-class": "java.util.List"
