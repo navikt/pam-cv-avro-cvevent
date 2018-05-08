@@ -3,7 +3,7 @@
   "type": "record",
   "name": "CvEvent",
   "fields": [
-    {"name": "fodselsnummer", "type": "string"},
+    {"name": "fodselsnummer", "type": ["null", "string"]},
     {"name": "fornavn", "type": "string"},
     {"name": "etternavn", "type": "string"},
     {"name": "fodselsdato", "type": ["null", "string"]},
