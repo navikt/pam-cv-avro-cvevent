@@ -29,6 +29,7 @@
     {"name": "tidsstempel", "type": "string"},
     {"name": "orgenhet", "type": ["null", "string"], "default": null },
     {"name": "kvalifiseringsgruppekode", "type": ["null", "string"], "default": null },
+    {"name": "hovedmaalkode", "type": ["null", "string"], "default": null },
     {"name": "frkas", "type": "boolean" },
     {"name": "imatc", "type": "boolean" },
     {"name": "frKode", "type": ["null", "string"], "default": null },
