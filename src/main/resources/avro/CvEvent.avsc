@@ -30,8 +30,8 @@
     {"name": "orgenhet", "type": ["null", "string"], "default": null },
     {"name": "kvalifiseringsgruppekode", "type": ["null", "string"], "default": null },
     {"name": "hovedmaalkode", "type": ["null", "string"], "default": null },
-    {"name": "fritattKandidatsok", "type": "boolean" },
-    {"name": "fritattAgKandidatsok", "type": "boolean" },
+    {"name": "fritattKandidatsok", "type": "boolean", "default": "true" },
+    {"name": "fritattAgKandidatsok", "type": "boolean", "default": "true" },
     {"name": "frKode", "type": ["null", "string"], "default": null },
     {"name": "erDoed", "type": ["null", "boolean"], "default": null },
     {"name": "utdanning", "type":
