@@ -32,7 +32,7 @@
     {"name": "hovedmaalkode", "type": ["null", "string"], "default": null },
     {"name": "fritattKandidatsok", "type": "boolean", "default": true },
     {"name": "fritattAgKandidatsok", "type": "boolean", "default": true },
-    {"name": "sperretAnsattEllerFamilie", "type": ["null", "boolean"], "default": false },
+    {"name": "sperretAnsattEllerFamilie", "type": ["null", "boolean"], "default": null },
     {"name": "frKode", "type": ["null", "string"], "default": null },
     {"name": "erDoed", "type": ["null", "boolean"], "default": null },
     {"name": "utdanning", "type":
