@@ -12,9 +12,26 @@
 	<name>cv-event</name>
 	<description>Events for publisering fra PAM-CV</description>
 
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<organization>NAV (Arbeids- og velferdsdirektoratet) - The Norwegian Labour and Welfare Administration</organization>
+			<organizationUrl>https://www.nav.no</organizationUrl>
+		</developer>
+	</developers>
+
 	<properties>
-		<avro.version>1.8.1</avro.version>
+		<avro.version>1.10.0</avro.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>8</java.version>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -23,8 +40,6 @@
 			<artifactId>avro</artifactId>
 			<version>${avro.version}</version>
 		</dependency>
-
-		<!-- test -->
 
 	</dependencies>
 
@@ -57,5 +72,11 @@
 			<url>https://maven.pkg.github.com/navikt/pam-cv-avro-cvevent</url>
 		</repository>
 	</distributionManagement>
+	<scm>
+		<developerConnection>scm:git:git@github.com:navikt/pam-cv-avro-cvevent.git</developerConnection>
+		<connection>scm:git:git@github.com:navikt/pam-cv-avro-cvevent.git</connection>
+		<url>https://github.com/navikt/pam-cv-avro-cvevent</url>
+		<tag>HEAD</tag>
+	</scm>
 
 </project>
